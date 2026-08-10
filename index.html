@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlexboxVetech - Game Belajar CSS Flexbox Interaktif</title>
+  <meta name="description"
+    content="Pelajari CSS Flexbox dengan cara yang seru dan interaktif! Pandu maskot Vetech menuju tempat landing dengan menulis sintaks Flexbox." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/editor.css" />
+  <link rel="stylesheet" href="/src/css/pond.css" />
+</head>
+
+<body>
+  <div id="app" class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <img src="/src/assets/mascot.png" class="brand-mascot-logo" alt="Vetech Mascot" />
+        <h1 class="brand-title">Flexbox<span class="highlight">Vetech</span></h1>
+      </div>
+
+      <div class="level-navigation">
+        <button id="prev-level-btn" class="nav-arrow-btn" title="Level Sebelumnya">◀</button>
+        <button id="level-selector-btn" class="level-pill-btn">
+          Level <span id="current-level-num">1</span> dari <span id="total-levels-num">15</span>
+          <span class="dropdown-caret">▼</span>
+        </button>
+        <button id="next-level-btn" class="nav-arrow-btn" title="Level Berikutnya">▶</button>
+      </div>
+
+      <div class="header-actions">
+        <button id="audio-toggle-btn" class="icon-btn" title="Aktifkan/Matikan Suara">
+          <span id="audio-icon">🔊</span>
+        </button>
+        <button id="cheat-sheet-btn" class="icon-btn secondary-btn" title="Buka Panduan Flexbox">
+          📖 Cheat Sheet
+        </button>
+        <button id="reset-level-btn" class="icon-btn secondary-btn" title="Reset Level Ini">
+          🔄 Reset
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="game-layout">
+      <!-- Left Column: Instructions & Code Editor -->
+      <section class="instructions-panel">
+        <div class="level-card">
+          <div class="level-header">
+            <h2 id="level-title" class="level-title">Level 1: Justify Content</h2>
+            <span id="level-badge" class="level-badge">Dasar</span>
+          </div>
+
+          <div id="level-instructions" class="level-instructions">
+            <!-- Instruction text injected by JS -->
+          </div>
+
+          <div id="level-hint-box" class="hint-card hidden">
+            <div class="hint-header">
+              <span class="hint-icon">💡</span>
+              <strong>Petunjuk:</strong>
+            </div>
+            <p id="level-hint-text"></p>
+          </div>
+        </div>
+
+        <!-- CSS Code Editor Area -->
+        <div class="editor-container">
+          <div class="editor-header">
+            <span class="editor-title">styles.css</span>
+            <button id="toggle-hint-btn" class="btn-text">💡 Petunjuk</button>
+          </div>
+
+          <div class="editor-body">
+            <div class="line-numbers" id="line-numbers">
+              1<br>2<br>3<br>4<br>5
+            </div>
+            <div class="code-area">
+              <pre class="code-static">#pond {<br>  display: flex;</pre>
+              <div class="input-wrapper">
+                <textarea id="css-input" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"
+                  placeholder="/* Ketik properti Flexbox di sini */&#10;justify-content: flex-end;"></textarea>
+              </div>
+              <pre class="code-static">}</pre>
+            </div>
+          </div>
+
+          <!-- Quick Suggestion Bar -->
+          <div id="suggestion-bar" class="suggestion-bar">
+            <!-- Dynamic suggestion pills injected by JS -->
+          </div>
+
+          <div class="editor-footer">
+            <div class="status-indicator" id="status-indicator">
+              <span class="status-dot"></span>
+              <span id="status-text">Coba cocokkan kodok dengan teratai...</span>
+            </div>
+            <button id="submit-btn" class="btn btn-primary" disabled>
+              Level Selanjutnya ▶
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Interactive Pond Preview -->
+      <section class="pond-panel">
+        <div class="pond-frame">
+          <!-- Canvas for Victory Confetti -->
+          <canvas id="confetti-canvas"></canvas>
+
+          <!-- Water background elements -->
+          <div class="water-ripples">
+            <div class="ripple r1"></div>
+            <div class="ripple r2"></div>
+            <div class="ripple r3"></div>
+          </div>
+
+          <!-- Layer 1: Target Lilypads -->
+          <div id="lilypads" class="pond-layer lilypads-layer">
+            <!-- Dynamic Lilypads injected by JS -->
+          </div>
+
+          <!-- Layer 2: Controllable Frogs -->
+          <div id="pond" class="pond-layer frogs-layer">
+            <!-- Dynamic Frogs injected by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: Attribution & Reference -->
+    <footer class="app-footer">
+      <div class="footer-attribution">
+        <span class="footer-label">🎮 Terinspirasi dari</span>
+        <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener noreferrer" class="footer-link">
+          Flexbox Froggy
+        </a>
+        <span class="footer-sep">oleh</span>
+        <a href="https://thomaspark.co/" target="_blank" rel="noopener noreferrer" class="footer-link">Thomas Park</a>
+        <span class="footer-sep">•</span>
+        <span class="footer-label">Dibuat ulang sebagai proyek games opera</span>
+        <strong class="footer-brand">Veterantech</strong>
+        <span class="footer-sep">•</span>
+        <span class="footer-label">Maskot oleh</span>
+        <strong class="footer-brand">Vetech</strong>
+        <span class="footer-sep">•</span>
+        <span class="footer-label">Bukan afiliasi resmi dari Flexbox Froggy</span>
+      </div>
+    </footer>
+
+    <!-- Modal: Level Selector -->
+    <div id="level-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Pilih Level Flexbox</h3>
+          <button id="close-level-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="level-grid" class="level-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Flexbox Cheat Sheet -->
+    <div id="cheatsheet-modal" class="modal-overlay hidden">
+      <div class="modal-content modal-large">
+        <div class="modal-header">
+          <h3>📖 Panduan Lengkap CSS Flexbox</h3>
+          <button id="close-cheatsheet-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body cheat-sheet-content">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Level Complete Celebration -->
+    <div id="victory-modal" class="modal-overlay hidden">
+      <div class="modal-content victory-card">
+        <div class="victory-icon">✨ 🤖 🚀</div>
+        <h2>Level Selesai!</h2>
+        <p id="victory-message">Luar biasa! Maskot Vetech telah mendarat dengan sempurna di landasan target.</p>
+        <div class="victory-actions">
+          <button id="victory-next-btn" class="btn btn-primary btn-large">
+            Lanjut ke Level berikutnya ▶
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
