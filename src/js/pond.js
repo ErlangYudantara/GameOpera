@@ -63,9 +63,11 @@ export class PondRenderer {
     });
     this.pondEl.innerHTML = frogHtml;
 
-    // If target selector is individual frog (e.g. .frog-red), apply default lilypad position to that frog's lilypad
+    // If target selector is individual element (e.g. .frog-red → target lilypad .lilypad-red)
     if (level.selector !== '#pond') {
-      const targetLily = this.lilypadsEl.querySelector(level.selector);
+      // Translate .frog-X selector to matching .lilypad-X on the lilypads layer
+      const lilypadSel = level.selector.replace('.frog-', '.lilypad-');
+      const targetLily = this.lilypadsEl.querySelector(lilypadSel);
       if (targetLily) {
         targetLily.style.cssText = level.targetStyle;
       }
