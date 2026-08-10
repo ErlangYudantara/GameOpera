@@ -1,8 +1,8 @@
 /* ==========================================================================
    FLEXBOX POND - POND RENDERER & COLLISION DETECTOR
    ========================================================================== */
-
 import { soundEngine } from './audio.js';
+import mascotImg from '../assets/mascot.png';
 
 /* SVG Template for Lilypads */
 const getLilypadSVG = (color) => `
@@ -17,7 +17,7 @@ const getLilypadSVG = (color) => `
 /* Template for Mascot */
 const getFrogSVG = (color, id) => `
 <div class="frog frog-${color}" id="${id}">
-  <img src="/src/assets/mascot.png" class="mascot-img" alt="Vetech Mascot" />
+  <img src="${mascotImg}" class="mascot-img" alt="Vetech Mascot" />
 </div>`;
 
 export class PondRenderer {
@@ -117,7 +117,7 @@ export class PondRenderer {
     if (allMatched && !this.matchedState) {
       this.matchedState = true;
       frogs.forEach(f => f.classList.add('matched'));
-      
+
       if (!isInitialLoad) {
         soundEngine.playRibbit();
         soundEngine.playWinSound();
