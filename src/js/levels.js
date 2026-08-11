@@ -153,7 +153,7 @@ export const LEVELS = [
     badge: "Lanjutan",
     instructions: "Terkadang kamu perlu memindahkan satu maskot tertentu saja. Maskot <strong>merah</strong> saat ini ada di kiri. Gunakan properti <code>order</code> agar ia berpindah ke posisi paling kanan (setelah hijau dan kuning).",
     hint: "Properti <code>order</code> default bernilai 0. Berikan nilai positif seperti <code>order: 1;</code> pada maskot merah agar ia berpindah ke akhir baris.",
-    suggestions: ["order:", "1"],
+    suggestions: ["order:", "1", "-1", "-2"],
     frogs: [{ id: "frog-1", color: "red" }, { id: "frog-2", color: "green" }, { id: "frog-3", color: "yellow" }],
     targetStyle: "order: 1;",
     selector: ".frog-red",
