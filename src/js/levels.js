@@ -5,7 +5,7 @@
 export const LEVELS = [
   {
     id: 1,
-    title: "Justify Content (Flex-End)",
+    title: "Justify Content",
     badge: "Dasar",
     instructions: "Pandu maskot Vetech ke tempat landing di sebelah kanan dengan menggunakan properti <code>justify-content</code>. Properti ini meratakan elemen secara horizontal.",
     hint: "Gunakan <code>justify-content: flex-end;</code> untuk menggeser elemen ke ujung kanan area.",
@@ -17,7 +17,7 @@ export const LEVELS = [
   },
   {
     id: 2,
-    title: "Justify Content (Center)",
+    title: "Justify Content",
     badge: "Dasar",
     instructions: "Gunakan <code>justify-content</code> untuk memindahkan maskot Vetech ke tengah area.",
     hint: "Gunakan nilai <code>center</code> pada <code>justify-content</code>.",
@@ -29,7 +29,7 @@ export const LEVELS = [
   },
   {
     id: 3,
-    title: "Justify Content (Space-Around)",
+    title: "Justify Content",
     badge: "Dasar",
     instructions: "Bantu ketiga maskot Vetech mendarat di posisi mereka masing-masing sehingga memiliki ruang yang sama di sekelilingnya.",
     hint: "Cobalah <code>justify-content: space-around;</code> untuk memberi jarak simetris.",
@@ -41,7 +41,7 @@ export const LEVELS = [
   },
   {
     id: 4,
-    title: "Justify Content (Space-Between)",
+    title: "Justify Content",
     badge: "Dasar",
     instructions: "Sekarang pisahkan maskot agar posisi paling kiri dan paling kanan berada di tepi area.",
     hint: "Gunakan <code>justify-content: space-between;</code> agar jarak antar elemen sama dan menyentuh tepi.",
@@ -53,7 +53,7 @@ export const LEVELS = [
   },
   {
     id: 5,
-    title: "Align Items (Flex-End)",
+    title: "Align Items",
     badge: "Menengah",
     instructions: "Gunakan <code>align-items</code> untuk memindahkan maskot Vetech ke bagian bawah area. Properti ini meratakan elemen secara vertikal.",
     hint: "Gunakan <code>align-items: flex-end;</code> untuk meratakan elemen ke bawah.",
@@ -89,7 +89,7 @@ export const LEVELS = [
   },
   {
     id: 8,
-    title: "Flex Direction (Row-Reverse)",
+    title: "Flex Direction",
     badge: "Menengah",
     instructions: "Ubah urutan horizontal kodok menggunakan <code>flex-direction</code>. Nilai <code>row-reverse</code> membalikkan urutan dari kanan ke kiri.",
     hint: "Gunakan <code>flex-direction: row-reverse;</code>.",
@@ -101,7 +101,7 @@ export const LEVELS = [
   },
   {
     id: 9,
-    title: "Flex Direction (Column)",
+    title: "Flex Direction",
     badge: "Menengah",
     instructions: "Atur posisi kodok secara vertikal dalam satu kolom menggunakan <code>flex-direction: column;</code>.",
     hint: "Cobalah <code>flex-direction: column;</code>.",
